@@ -1,0 +1,10 @@
+{
+    "name": "Programador Aventureiro",
+    "short_name": "Programador Aventureiro",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "description": "As melhores aventuras do mundo Tech!",
+    "orientation": "natural"
+}
