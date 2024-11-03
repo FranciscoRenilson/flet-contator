@@ -164,3 +164,135 @@ package:media_kit_libs_linux registered.
 ** (flet:9083): WARNING **: 08:09:58.879: Attempted to set message handler on an FlBinaryMessenger without an engine
 (venv) urenilson@crenilson:~/contador$ 
 
+nova versao
+urenilson@crenilson:~/contador$ source venv/bin/activate
+(venv) urenilson@crenilson:~/contador$ flet run main.py -w -p5353
+http://127.0.0.1:5353
+/home/urenilson/contador/venv/lib/python3.12/site-packages/websockets/legacy/server.py:1187: DeprecationWarning: remove second argument of ws_handler
+(venv) urenilson@crenilson:~/contador$ flet pack main.py --icon favicon.png --add-data "assets:assets" -n "contador"
+Please install PyInstaller module to use flet pack command: No module named 'PyInstaller'
+(venv) urenilson@crenilson:~/contador$ pip install PyInstaller
+Collecting PyInstaller
+  Using cached pyinstaller-6.11.0-py3-none-manylinux2014_x86_64.whl.metadata (8.4 kB)
+Collecting setuptools>=42.0.0 (from PyInstaller)
+  Using cached setuptools-75.3.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting altgraph (from PyInstaller)
+  Using cached altgraph-0.17.4-py2.py3-none-any.whl.metadata (7.3 kB)
+Collecting pyinstaller-hooks-contrib>=2024.8 (from PyInstaller)
+  Using cached pyinstaller_hooks_contrib-2024.9-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: packaging>=22.0 in ./venv/lib/python3.12/site-packages (from PyInstaller) (23.2)
+Using cached pyinstaller-6.11.0-py3-none-manylinux2014_x86_64.whl (707 kB)
+Using cached pyinstaller_hooks_contrib-2024.9-py3-none-any.whl (336 kB)
+Using cached setuptools-75.3.0-py3-none-any.whl (1.3 MB)
+Using cached altgraph-0.17.4-py2.py3-none-any.whl (21 kB)
+Installing collected packages: altgraph, setuptools, pyinstaller-hooks-contrib, PyInstaller
+Successfully installed PyInstaller-6.11.0 altgraph-0.17.4 pyinstaller-hooks-contrib-2024.9 setuptools-75.3.0
+(venv) urenilson@crenilson:~/contador$ flet pack main.py --icon favicon.png --add-data "assets:assets" -n "contador"
+Running PyInstaller: ['main.py', '--noconfirm', '--noconsole', '--icon', 'favicon.png', '--name', 'contador', '--add-data', 'assets:assets', '--onefile']
+604 INFO: PyInstaller: 6.11.0, contrib hooks: 2024.9
+605 INFO: Python: 3.12.3
+607 INFO: Platform: Linux-6.8.0-48-generic-x86_64-with-glibc2.39
+607 INFO: Python environment: /home/urenilson/contador/venv
+608 INFO: wrote /home/urenilson/contador/contador.spec
+610 INFO: Module search paths (PYTHONPATH):
+['/home/urenilson/contador/venv/bin',
+ '/usr/lib/python312.zip',
+ '/usr/lib/python3.12',
+ '/usr/lib/python3.12/lib-dynload',
+ '/home/urenilson/contador/venv/lib/python3.12/site-packages',
+ '/home/urenilson/contador/venv/lib/python3.12/site-packages/setuptools/_vendor',
+ '/home/urenilson/contador']
+1294 INFO: Appending 'datas' from .spec
+1296 INFO: checking Analysis
+1296 INFO: Building Analysis because Analysis-00.toc is non existent
+1296 INFO: Running Analysis Analysis-00.toc
+1296 INFO: Target bytecode optimization level: 0
+1296 INFO: Initializing module dependency graph...
+1298 INFO: Initializing module graph hook caches...
+1318 INFO: Analyzing base_library.zip ...
+2226 INFO: Processing standard module hook 'hook-heapq.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+2350 INFO: Processing standard module hook 'hook-encodings.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+4584 INFO: Processing standard module hook 'hook-pickle.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+6436 INFO: Caching module dependency graph...
+6546 INFO: Looking for Python shared library...
+6571 WARNING: Unrecognised line of output 'Cache gerado por: ldconfig (Ubuntu GLIBC 2.39-0ubuntu8.3) stable release version 2.39' from ldconfig
+6571 INFO: Using Python shared library: /lib/x86_64-linux-gnu/libpython3.12.so.1.0
+6572 INFO: Analyzing /home/urenilson/contador/main.py
+6575 INFO: Processing standard module hook 'hook-flet.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/flet/__pyinstaller'
+6595 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+6596 INFO: SetuptoolsInfo: initializing cached setuptools info...
+11455 INFO: Processing standard module hook 'hook-difflib.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+11728 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+11960 INFO: Processing standard module hook 'hook-xml.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+13006 INFO: Processing standard module hook 'hook-platform.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+14241 INFO: Processing standard module hook 'hook-certifi.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+14791 INFO: Processing standard module hook 'hook-anyio.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+16206 INFO: Processing pre-safe-import-module hook 'hook-importlib_metadata.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16206 INFO: Setuptools: 'importlib_metadata' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.importlib_metadata'!
+16217 INFO: Processing standard module hook 'hook-setuptools.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+16234 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16359 INFO: Processing standard module hook 'hook-sysconfig.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+16370 INFO: Processing pre-safe-import-module hook 'hook-jaraco.functools.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16370 INFO: Setuptools: 'jaraco.functools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco.functools'!
+16382 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16382 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+16623 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16636 INFO: Processing standard module hook 'hook-packaging.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+16755 INFO: Processing pre-safe-import-module hook 'hook-jaraco.text.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16756 INFO: Setuptools: 'jaraco.text' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco.text'!
+16771 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+16772 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16772 INFO: Setuptools: 'importlib_resources' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.importlib_resources'!
+16803 INFO: Processing pre-safe-import-module hook 'hook-zipp.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16803 INFO: Setuptools: 'zipp' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.zipp'!
+16837 INFO: Processing pre-safe-import-module hook 'hook-jaraco.context.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16837 INFO: Setuptools: 'jaraco.context' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco.context'!
+16848 INFO: Processing pre-safe-import-module hook 'hook-backports.tarfile.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+16848 INFO: Setuptools: 'backports.tarfile' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.backports.tarfile'!
+16965 INFO: Processing standard module hook 'hook-backports.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+17378 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+17378 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+18012 INFO: Processing standard module hook 'hook-pkg_resources.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+18290 INFO: Processing pre-safe-import-module hook 'hook-platformdirs.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+18290 INFO: Setuptools: 'platformdirs' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.platformdirs'!
+18477 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+18477 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+18727 INFO: Processing standard module hook 'hook-setuptools._vendor.importlib_metadata.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+18758 INFO: Processing standard module hook 'hook-pygments.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks'
+24562 INFO: Processing pre-safe-import-module hook 'hook-six.moves.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/pre_safe_import_module'
+25234 INFO: Processing standard module hook 'hook-pydantic.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+26170 INFO: Processing standard module hook 'hook-zoneinfo.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+27113 INFO: Processing standard module hook 'hook-uvicorn.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+28082 INFO: Processing standard module hook 'hook-websockets.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+28725 INFO: Processing module hooks (post-graph stage)...
+28915 INFO: Processing standard module hook 'hook-uvloop.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/stdhooks'
+32631 INFO: Performing binary vs. data reclassification (23 entries)
+32661 INFO: Looking for ctypes DLLs
+32803 INFO: Analyzing run-time hooks ...
+32813 INFO: Including run-time hook 'pyi_rth_inspect.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/rthooks'
+32815 INFO: Including run-time hook 'pyi_rth_localhost_fletd.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/flet/__pyinstaller/rthooks'
+32816 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/rthooks'
+32818 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/rthooks'
+32820 INFO: Including run-time hook 'pyi_rth_setuptools.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/rthooks'
+32821 INFO: Including run-time hook 'pyi_rth_pkgres.py' from '/home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/hooks/rthooks'
+32855 INFO: Looking for dynamic libraries
+33133 INFO: Warnings written to /home/urenilson/contador/build/contador/warn-contador.txt
+33236 INFO: Graph cross-reference written to /home/urenilson/contador/build/contador/xref-contador.html
+33289 INFO: checking PYZ
+33289 INFO: Building PYZ because PYZ-00.toc is non existent
+33289 INFO: Building PYZ (ZlibArchive) /home/urenilson/contador/build/contador/PYZ-00.pyz
+34693 INFO: Building PYZ (ZlibArchive) /home/urenilson/contador/build/contador/PYZ-00.pyz completed successfully.
+34733 WARNING: Ignoring icon; supported only on Windows and macOS!
+34746 INFO: checking PKG
+34746 INFO: Building PKG because PKG-00.toc is non existent
+34746 INFO: Building PKG (CArchive) contador.pkg
+44660 INFO: Building PKG (CArchive) contador.pkg completed successfully.
+44663 INFO: Bootloader /home/urenilson/contador/venv/lib/python3.12/site-packages/PyInstaller/bootloader/Linux-64bit-intel/run
+44663 INFO: checking EXE
+44663 INFO: Building EXE because EXE-00.toc is non existent
+44663 INFO: Building EXE from EXE-00.toc
+44663 INFO: Copying bootloader EXE to /home/urenilson/contador/dist/contador
+44663 INFO: Appending PKG archive to custom ELF section in EXE
+44932 INFO: Building EXE from EXE-00.toc completed successfully.
+Deleting temp directory: /tmp/b1887938-42ae-4eaf-9b3d-127bffd8eb91
+(venv) urenilson@crenilson:~/contador$ 
